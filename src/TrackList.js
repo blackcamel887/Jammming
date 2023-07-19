@@ -2,8 +2,6 @@ import React from "react";
 import Track from './Track'
 function TrackList(props){
     let list = [];
-
-
     for(const song of props.songs){
         list.push(<li>
             <Track key={song.id} artist={song.artist} album={song.album} name={song.name}/>
