@@ -8,8 +8,12 @@ function TrackList(props){
         list.push(<li>
             <Track key={song.id} artist={song.artist} album={song.album} name={song.name}/>
             <button onClick={()=>{
-                props.add(song);
-                props.remove(song);
+                if(props.symbol==='+'){
+                    props.add(song);
+                }
+                else{
+                    props.remove(song);
+                }
             }}>{props.symbol}</button>
         </li>)
     }

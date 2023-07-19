@@ -7,7 +7,7 @@ function PlayList(props){
     }
     return(<div>
             <input type='text' onChange={handleChange} value={trackName} placeholder="list name"/>
-            <TrackList songs={props.songs} symbol='X' add={props.add} remove={props.remove}/>
+            <TrackList songs={props.songs} symbol='X' remove={props.remove}/>
         </div>);
 }
 export default PlayList;
