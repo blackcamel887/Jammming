@@ -1,19 +1,9 @@
 import React from "react";
-
+import TrackList from "./TrackList";
 function SearchResults(props){
-    let list = [];
-    for(const i of props.songs){
-        list.push(<li>
-            <h2>{i.name}</h2>
-            <h3 style={{color: "grey"}}>{i.artist}</h3>
-            <button>+</button>
-        </li>)
-    }
-    return (
-    <div>
+    return(<div>
         <h1>Results</h1>
-        <ul>{list}</ul>
-    </div>
-    )
+        <TrackList songs={props.songs} symbol='+' add={props.add} remove={props.remove}/>
+        </div>);
 }
 export default SearchResults
